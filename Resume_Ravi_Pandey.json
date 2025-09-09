@@ -1,0 +1,75 @@
+{
+  "name": "Ravi Prakash Pandey",
+  "email": "raviprakashpandey15@gmail.com",
+  "mobile": "8013852543",
+  "linkedin": "https://www.linkedin.com/in/ravi-prakash-pandey-982b6215b/",
+  "location": "Noida, India",
+  "date_of_birth": "15 July 1992",
+  "gender": "Male",
+  "summary": "I am an experienced Software Engineer with 7 years of expertise, specializing for the last 4 years in Python development. I have honed my skills in designing, developing, and deploying scalable solutions for data analysis, automation, and web applications. I excel in fast-paced environments and am committed to delivering high-quality results",
+  "experience": [
+    {
+      "title": "Senior Python Developer",
+      "company": "Happiest Minds Technologies",
+      "period": "01/2021 - Present",
+      "location": "Noida, India",
+      "description": "A technology company focused on providing IT solutions and services.",
+      "responsibilities": [
+        "Architected and maintained robust Python-based data pipelines and analytics platforms.",
+        "Developed RESTful APIs with Flask and Django for scalable web and mobile solutions.",
+        "Led cross-functional teams in delivering high-impact software products.",
+        "Optimized data workflows and automated reporting using Pandas, NumPy, and SQL.",
+        "Mentored junior developers and conducted technical interviews."
+      ]
+    },
+    {
+      "title": "Software Engineer",
+      "company": "Previous Company",
+      "period": "01/2018 - 12/2021",
+      "location": "Location of Previous Company",
+      "description": "A company engaged in software development.",
+      "responsibilities": [
+        "Designed automation scripts and performed advanced data analysis using Python.",
+        "Contributed to full-stack web application development and deployment.",
+        "Participated in code reviews, process improvements, and Agile ceremonies.",
+        "Collaborated with business stakeholders to gather requirements and deliver solutions."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Bachelor of Technology (B.Tech)",
+      "field": "Computer Science and Engineering",
+      "university": "Dr. A.P.J. Abdul Kalam Technical University",
+      "period": "2010 - 2014",
+      "location": "Lucknow, India"
+    }
+  ],
+  "certifications": [
+    "Python for Data Science",
+    "Machine Learning Specialization",
+    "Certified Scrum Master"
+  ],
+  "skills": [
+    "Python", "NumPy", "Pandas", "Seaborn", "Matplotlib", "SQL", "Flask", "Django", "REST APIs", "Git", "Linux", "Jupyter Notebook", "Data Analysis", "Machine Learning", "ETL", "Docker", "Unit Testing", "Agile/Scrum"
+  ],
+  "languages": ["English", "Hindi"],
+  "hobbies": ["Reading tech blogs", "Playing chess", "Traveling"],
+  "projects": [
+    {
+      "title": "Stock Market Analysis Platform",
+      "description": "Built a Python dashboard for real-time stock data visualization and analysis using Pandas, Matplotlib, and Seaborn."
+    },
+    {
+      "title": "Automated ETL Pipeline",
+      "description": "Designed and deployed an ETL pipeline for data ingestion and transformation using Python and SQL."
+    },
+    {
+      "title": "Crypto Price Alert Bot",
+      "description": "Developed a Telegram bot for crypto price alerts using REST APIs and Python automation."
+    }
+  ],
+  "achievements": [
+    "Successfully built and deployed multiple data-driven solutions that improved operational efficiency."
+  ]
+}

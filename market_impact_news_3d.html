@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Impact News Sources</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(120deg, #e0e7ff 0%, #f8fafc 100%);
+            font-family: 'Montserrat', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+            color: #0f172a;
+            margin-top: 40px;
+            margin-bottom: 24px;
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 32px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .card {
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(59,130,246,0.12), 0 1.5px 6px rgba(0,0,0,0.08);
+            padding: 32px 24px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            perspective: 800px;
+        }
+        .card:hover {
+            transform: scale(1.04) rotateY(6deg) rotateX(2deg);
+            box-shadow: 0 16px 48px rgba(59,130,246,0.18), 0 3px 12px rgba(0,0,0,0.12);
+        }
+        .logo {
+            width: 64px;
+            height: 64px;
+            margin-bottom: 16px;
+            border-radius: 12px;
+            background: #e0e7ff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.2rem;
+        }
+        .source {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #2563eb;
+            margin-bottom: 8px;
+            text-align: center;
+        }
+        .desc {
+            color: #64748b;
+            font-size: 1rem;
+            text-align: center;
+            margin-bottom: 12px;
+        }
+        .tag {
+            display: inline-block;
+            background: #6366f1;
+            color: #fff;
+            border-radius: 6px;
+            padding: 4px 12px;
+            font-size: 0.9rem;
+            margin-top: 6px;
+        }
+        a {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <h1>Top News Sources Impacting Markets</h1>
+    <div class="grid">
+        <!-- Card Example -->
+        <div class="card">
+            <div class="logo">💹</div>
+            <div class="source"><a href="https://www.bloomberg.com/" target="_blank">Bloomberg</a></div>
+            <div class="desc">Global financial news, market analysis, and business events.</div>
+            <div class="tag">Business & Stocks</div>
+        </div>
+        <div class="card">
+            <div class="logo">📰</div>
+            <div class="source"><a href="https://www.reuters.com/" target="_blank">Reuters</a></div>
+            <div class="desc">Breaking news on business, markets, and world events.</div>
+            <div class="tag">Business & Stocks</div>
+        </div>
+        <div class="card">
+            <div class="logo">📈</div>
+            <div class="source"><a href="https://www.cnbc.com/markets/" target="_blank">CNBC Markets</a></div>
+            <div class="desc">Live market news, stocks, crypto, and business updates.</div>
+            <div class="tag">Stocks & Crypto</div>
+        </div>
+        <div class="card">
+            <div class="logo">🪙</div>
+            <div class="source"><a href="https://www.coindesk.com/" target="_blank">CoinDesk</a></div>
+            <div class="desc">Leading source for crypto news, analysis, and trends.</div>
+            <div class="tag">Crypto</div>
+        </div>
+        <div class="card">
+            <div class="logo">🌐</div>
+            <div class="source"><a href="https://cryptopanic.com/" target="_blank">CryptoPanic</a></div>
+            <div class="desc">Crypto news aggregator and market sentiment tracker.</div>
+            <div class="tag">Crypto</div>
+        </div>
+        <div class="card">
+            <div class="logo">💼</div>
+            <div class="source"><a href="https://www.ft.com/" target="_blank">Financial Times</a></div>
+            <div class="desc">Business news, global markets, and economic events.</div>
+            <div class="tag">Business & Stocks</div>
+        </div>
+        <div class="card">
+            <div class="logo">🦅</div>
+            <div class="source"><a href="https://www.wsj.com/news/markets" target="_blank">Wall Street Journal</a></div>
+            <div class="desc">Premium market news, analysis, and business coverage.</div>
+            <div class="tag">Business & Stocks</div>
+        </div>
+        <div class="card">
+            <div class="logo">🧑‍💼</div>
+            <div class="source"><a href="https://www.forbes.com/business/" target="_blank">Forbes Business</a></div>
+            <div class="desc">Business news, market movers, and company insights.</div>
+            <div class="tag">Business</div>
+        </div>
+        <div class="card">
+            <div class="logo">🗞️</div>
+            <div class="source"><a href="https://www.investing.com/news/" target="_blank">Investing.com News</a></div>
+            <div class="desc">Latest news on stocks, crypto, and global markets.</div>
+            <div class="tag">Stocks & Crypto</div>
+        </div>
+        <div class="card">
+            <div class="logo">🧠</div>
+            <div class="source"><a href="https://www.economist.com/" target="_blank">The Economist</a></div>
+            <div class="desc">Global business, finance, and economic news.</div>
+            <div class="tag">Business & Economy</div>
+        </div>
+        <div class="card">
+            <div class="logo">🔬</div>
+            <div class="source"><a href="https://techcrunch.com/" target="_blank">TechCrunch</a></div>
+            <div class="desc">Tech and business news impacting markets and crypto.</div>
+            <div class="tag">Tech & Business</div>
+        </div>
+        <div class="card">
+            <div class="logo">🪙</div>
+            <div class="source"><a href="https://cryptoslate.com/" target="_blank">CryptoSlate</a></div>
+            <div class="desc">Crypto news, data, and research.</div>
+            <div class="tag">Crypto</div>
+        </div>
+        <div class="card">
+            <div class="logo">💰</div>
+            <div class="source"><a href="https://finance.yahoo.com/" target="_blank">Yahoo Finance</a></div>
+            <div class="desc">Comprehensive stock news, market data, and business events.</div>
+            <div class="tag">Stocks & Business</div>
+        </div>
+        <div class="card">
+            <div class="logo">📊</div>
+            <div class="source"><a href="https://www.marketwatch.com/" target="_blank">MarketWatch</a></div>
+            <div class="desc">Stock market news, analysis, and data.</div>
+            <div class="tag">Stocks</div>
+        </div>
+    </div>
+</body>
+</html>

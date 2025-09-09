@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Market News (Last 24 Hours)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(120deg, #e0e7ff 0%, #f8fafc 100%);
+            font-family: 'Montserrat', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+            color: #0f172a;
+            margin-top: 40px;
+            margin-bottom: 24px;
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+        }
+        .sources {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 32px;
+        }
+        .source-card {
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(59,130,246,0.12), 0 1.5px 6px rgba(0,0,0,0.08);
+            padding: 24px 18px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            transition: transform 0.3s, box-shadow 0.3s;
+            perspective: 800px;
+        }
+        .source-card:hover {
+            transform: scale(1.03) rotateY(4deg) rotateX(1deg);
+            box-shadow: 0 16px 48px rgba(59,130,246,0.18), 0 3px 12px rgba(0,0,0,0.12);
+        }
+        .source-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #2563eb;
+            margin-bottom: 8px;
+        }
+        .news-list {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .news-item {
+            margin-bottom: 14px;
+            background: #f1f5f9;
+            border-radius: 8px;
+            padding: 10px 14px;
+            transition: box-shadow 0.2s;
+        }
+        .news-item:hover {
+            box-shadow: 0 2px 8px rgba(59,130,246,0.08);
+        }
+        .news-link {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 700;
+        }
+        .news-date {
+            color: #64748b;
+            font-size: 0.9rem;
+            margin-left: 8px;
+        }
+        .api-note {
+            color: #64748b;
+            font-size: 0.95rem;
+            margin-top: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Daily Market News (Last 24 Hours)</h1>
+    <div class="sources" id="sources">
+        <!-- News will be loaded here -->
+    </div>
+    <script>
+        // Example: NewsAPI (free tier, needs API key)
+        const newsSources = [
+            {
+                name: 'NewsAPI',
+                api: 'https://newsapi.org/v2/everything?q=stock OR crypto OR business&from=' + new Date(Date.now()-2592000000).toISOString().slice(0,10) + '&sortBy=publishedAt&apiKey=YOUR_NEWSAPI_KEY',
+                homepage: 'https://newsapi.org/',
+                free: true
+            },
+            {
+                name: 'Crypto News API',
+                api: 'https://cryptonews-api.com/api/v1?tickers=BTC,ETH,XRP&date=last30days&items=30&token=YOUR_CRYPTONEWSAPI_KEY',
+                homepage: 'https://cryptonews-api.com/',
+                free: true
+            },
+            {
+                name: 'Finnhub',
+                api: 'https://finnhub.io/api/v1/news?category=general&token=YOUR_FINNHUB_KEY', // Finnhub does not support date range in free tier
+                homepage: 'https://finnhub.io/',
+                free: true
+            },
+            // Add more APIs as needed
+        ];
+
+        function formatDate(dateStr) {
+            const d = new Date(dateStr);
+            return d.toLocaleString();
+        }
+
+        function createSourceCard(source, articles) {
+            let html = `<div class="source-card">
+                <div class="source-title"><a href="${source.homepage}" target="_blank">${source.name}</a></div>
+                <ul class="news-list">`;
+            if (articles && articles.length) {
+                articles.forEach(article => {
+                    html += `<li class="news-item">
+                        <a class="news-link" href="${article.url}" target="_blank">${article.title}</a>
+                        <span class="news-date">${formatDate(article.publishedAt || article.date || article.created_at)}</span>
+                    </li>`;
+                });
+            } else {
+                html += `<li class="news-item">No news found for last 24 hours.</li>`;
+            }
+            html += `</ul>
+                <div class="api-note">Requires free API key. <a href="${source.homepage}" target="_blank">Get API Key</a></div>
+            </div>`;
+            return html;
+        }
+
+        async function fetchNews(source) {
+            try {
+                const res = await fetch(source.api);
+                const data = await res.json();
+                let articles = [];
+                if (data.articles) articles = data.articles;
+                else if (data.data) articles = data.data;
+                else if (Array.isArray(data)) articles = data;
+                return createSourceCard(source, articles);
+            } catch (e) {
+                return createSourceCard(source, []);
+            }
+        }
+
+        async function loadAllNews() {
+            const container = document.getElementById('sources');
+            let html = '';
+            for (const source of newsSources) {
+                html += await fetchNews(source);
+            }
+            container.innerHTML = html;
+        }
+
+        loadAllNews();
+    </script>
+</body>
+</html>
