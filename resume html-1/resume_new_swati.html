@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Swati Pandey – Resume</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <style>
+        /* styles.css */
+       /* Enhanced Resume Styles – v2 */
+
+/* Color system */
+:root{
+  --bg:#f3f6fb;
+  --paper:#ffffff;
+  --text:#101828;
+  --muted:#565e6c;
+  --accent:#2e7cf6;
+  --accent-600:#1f67e6;
+  --rule:#e7ecf5;
+  --chip:#eef4ff;
+  --chip-b:#d9e6ff;
+  --success:#17b26a;
+  --warning:#fdb022;
+  --shadow:0 6px 24px rgba(16,24,40,.06), 0 2px 8px rgba(16,24,40,.05);
+}
+
+/* Reset & base */
+*{box-sizing:border-box}
+html,body{
+  margin:0;padding:0;background:var(--bg);color:var(--text);
+  font-family:Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+}
+img{max-width:100%;height:auto;display:block}
+
+/* Page shell */
+.page{
+  width: 980px; max-width: 100%;
+  margin: clamp(12px, 3vw, 28px) auto;
+  background: var(--paper);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  padding: clamp(18px, 3vw, 32px);
+  outline: 1px solid rgba(0,0,0,.02);
+}
+
+/* Header */
+.header{
+  display:flex; align-items:center; justify-content:space-between; gap:20px;
+  border-bottom:1px solid var(--rule); padding-bottom:16px;
+}
+.header .name{
+  font-size: clamp(26px, 4vw, 36px);
+  letter-spacing:.3px; margin:0 0 6px; font-weight:800;
+}
+.header .title{
+  font-weight:700; color:var(--accent); margin-bottom:6px;
+  text-transform: none;
+}
+.contacts{
+  display:flex; flex-wrap:wrap; gap:12px 16px; color:var(--muted); font-size:14px
+}
+.avatar-circle{
+  width:92px; height:92px; border-radius:50%;
+  background: radial-gradient(110px 110px at 30% 30%, #4e98ff 0% , var(--accent) 60%, var(--accent-600) 100%);
+  color:#fff; display:flex; align-items:center; justify-content:center;
+  font-weight:800; font-size:30px;
+  box-shadow: inset 0 0 0 6px rgba(255,255,255,.2), 0 8px 24px rgba(46,124,246,.28);
+}
+
+/* Columns */
+.columns{
+  display:grid; grid-template-columns: 1.12fr .88fr; gap:28px; margin-top:22px
+}
+.col .block{margin-bottom:22px}
+
+/* Section titles */
+.block-title{
+  --bar: 3px;
+  position:relative; font-size:15.5px; letter-spacing:.6px;
+  text-transform:uppercase; font-weight:800; margin:0 0 12px; padding-bottom:8px;
+}
+.block-title::after{
+  content:""; position:absolute; left:0; bottom:0; height:var(--bar); width:72px;
+  background: linear-gradient(90deg, var(--accent), #7aa8ff);
+  border-radius: 2px;
+}
+.block p{margin:0;color:var(--text)}
+
+/* Items */
+.item{margin-bottom:14px}
+.item-head{display:flex; align-items:baseline; justify-content:space-between; gap:12px}
+.item-role{font-weight:700}
+.item-meta{color:var(--muted); font-size:13.5px}
+.bullets{margin:8px 0 0 0; padding-left:18px}
+.bullets li{margin:7px 0}
+
+/* Plain list */
+.list-plain{margin:0; padding-left:18px}
+.list-plain li{margin:6px 0}
+
+/* Achievements */
+.badge-list{display:flex; flex-direction:column; gap:12px}
+.badge{
+  border:1px solid var(--rule); border-radius:10px; padding:12px 14px; background:linear-gradient(180deg,#fbfdff, #f7faff);
+  transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+}
+.badge:hover{ transform: translateY(-1px); box-shadow: var(--shadow); border-color:#dce6ff }
+.badge-title{font-weight:700; margin-bottom:2px}
+.badge-desc{color:var(--muted)}
+
+/* Skills chips */
+.chips{display:flex; flex-wrap:wrap; gap:10px}
+.chip{
+  background:var(--chip); border:1px solid var(--chip-b); color:#143d9a;
+  padding:6px 10px; border-radius:999px; font-size:13px; font-weight:700;
+  box-shadow: inset 0 -1px 0 rgba(255,255,255,.6), 0 1px 0 rgba(20,61,154,.04);
+  transition: background .15s ease, border-color .15s ease, transform .08s ease;
+}
+.chip:hover{ background:#e6efff; border-color:#cfe0ff; transform: translateY(-1px) }
+
+/* Languages dots */
+.lang .lang-row{display:flex; align-items:center; justify-content:space-between; margin:10px 0}
+.dots{display:inline-flex; gap:6px}
+.dot{
+  width:10px;height:10px;border-radius:50%;
+  border:2px solid var(--accent); background:transparent; box-shadow: inset 0 0 0 2px rgba(46,124,246,.08)
+}
+.dot.filled{background:var(--accent)}
+.dot.filled:nth-child(5){outline:2px solid rgba(46,124,246,.14); outline-offset:2px}
+
+/* Utility spacing */
+.tight{margin-top:6px;margin-bottom:6px;color:var(--text)}
+
+/* Callouts for success/warning (optional utility) */
+.callout-success{color:var(--success); font-weight:700}
+.callout-warn{color:var(--warning); font-weight:700}
+
+/* Focus & a11y */
+:focus-visible{outline:3px solid #98b9ff; outline-offset:2px; border-radius:6px}
+
+/* Links in content */
+a{color:var(--accent); text-decoration: none}
+a:hover{text-decoration: underline}
+
+/* Print optimisation */
+@media print{
+  body{background:#fff}
+  .page{box-shadow:none;margin:0;border-radius:0;width:auto;padding:0.55in}
+  .chip, .badge{box-shadow:none}
+  .badge{border-color:#cfd7e6}
+  .avatar-circle{box-shadow:none}
+}
+
+/* Responsive */
+@media (max-width: 920px){
+  .columns{grid-template-columns:1fr}
+  .header{align-items:flex-start}
+}
+@media (max-width: 640px){
+  .contacts{font-size:13px}
+  .avatar-circle{width:78px;height:78px;font-size:26px}
+  .page{padding:18px}
+}
+
+/* Optional subtle fade-in */
+@media (prefers-reduced-motion: no-preference){
+  .page{animation: fade-in .24s ease-out both}
+  .chip, .badge{animation: pop .24s ease-out both}
+}
+@keyframes fade-in{from{opacity:0; transform:translateY(4px)} to{opacity:1; transform:none}}
+@keyframes pop{from{transform:scale(.98)} to{transform:scale(1)}}
+
+          
+    </style>
+    <main class="page">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-main">
+                <h1 class="name">SWATI PANDEY</h1>
+                <div class="title">Software Engineer</div>
+                <div class="contacts">
+                    <span>+91-7270172674</span>
+                    <span>pandeymswati@gmail.com</span>
+                    <span>https://www.linkedin.com/swati</span>
+                    <span>Maharashtra, India</span>
+                </div>
+            </div>
+            <div class="avatar">
+                <div class="avatar-circle">SP</div>
+            </div>
+        </header>
+
+        <div class="columns">
+            <!-- Left column -->
+            <section class="col left">
+                <section class="block">
+                    <h2 class="block-title">Summary</h2>
+                    <p>
+                        Software Engineer with 3 years of experience developing data‑driven solutions using Python and
+                        SQL. Excel in designing ETL pipelines and scalable analytics to facilitate informed
+                        decision‑making. Passionate about machine learning, data analysis, and continuous improvement.
+                    </p>
+                </section>
+
+                <section class="block">
+                    <h2 class="block-title">Experience</h2>
+                    <div class="item">
+                        <div class="item-head">
+                            <div class="item-role">Software Engineer</div>
+                            <div class="item-meta">Happiest Minds Technologies • 01/2020 – 09/2023 • Onsite</div>
+                        </div>
+                        <ul class="bullets">
+                            <li>Owned and delivered data‑driven solutions with Python, SQL, and ML models for decision
+                                support.</li>
+                            <li>Designed ETL pipelines for processing and integration across multiple data sources.</li>
+                            <li>Collaborated with cross‑functional teams to deploy scalable analytics solutions.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="block">
+                    <h2 class="block-title">Education</h2>
+                    <div class="item">
+                        <div class="item-role">Bachelor of Technology</div>
+                        <div class="item-meta">Priyadarshini College of Engineering • 08/2018 – 06/2022 • Maharashtra,
+                            India</div>
+                    </div>
+                    <div class="item">
+                        <div class="item-role">Higher Secondary School</div>
+                        <div class="item-meta">Scholars of Scholar • 07/2016 – 05/2018 • Maharashtra, India</div>
+                    </div>
+                    <div class="item">
+                        <div class="item-role">Secondary School</div>
+                        <div class="item-meta">The Central County School • 07/2013 – 03/2016 • Maharashtra, India</div>
+                    </div>
+                </section>
+
+                <section class="block">
+                    <h2 class="block-title">Certification</h2>
+                    <ul class="list-plain">
+                        <li>NodeJS and MongoDB Training Certification — 2024</li>
+                        <li>Deep Learning in Python Training Certification — 2022</li>
+                    </ul>
+                </section>
+
+                <section class="block">
+                    <h2 class="block-title">Languages</h2>
+                    <div class="lang">
+                        <div class="lang-row">
+                            <span>Python</span>
+                            <div class="dots" aria-label="Proficient: 5/5">
+                                <span class="dot filled"></span><span class="dot filled"></span><span
+                                    class="dot filled"></span><span class="dot filled"></span><span
+                                    class="dot filled"></span>
+                            </div>
+                        </div>
+                        <div class="lang-row">
+                            <span>SQL</span>
+                            <div class="dots" aria-label="Proficient: 5/5">
+                                <span class="dot filled"></span><span class="dot filled"></span><span
+                                    class="dot filled"></span><span class="dot filled"></span><span
+                                    class="dot filled"></span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+            <!-- Right column -->
+            <aside class="col right">
+                <section class="block">
+                    <h2 class="block-title">Key Achievements</h2>
+                    <div class="badge-list">
+                        <div class="badge">
+                            <div class="badge-title">Contributor Award</div>
+                            <div class="badge-desc">Awarded “Elite Contributor” for outstanding contributions • May 2023
+                            </div>
+                        </div>
+                        <div class="badge">
+                            <div class="badge-title">Online Problem Solving</div>
+                            <div class="badge-desc">Solved 500+ problems across competitive programming platforms</div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="block">
+                    <h2 class="block-title">Skills</h2>
+                    <div class="chips">
+                        <span class="chip">Anaconda</span>
+                        <span class="chip">CSV</span>
+                        <span class="chip">Data Structures</span>
+                        <span class="chip">Deep Learning</span>
+                        <span class="chip">Django</span>
+                        <span class="chip">EDA</span>
+                        <span class="chip">ETL</span>
+                        <span class="chip">Git</span>
+                        <span class="chip">Jupyter</span>
+                        <span class="chip">Linux</span>
+                        <span class="chip">MongoDB</span>
+                        <span class="chip">Matplotlib</span>
+                        <span class="chip">Microsoft Power BI</span>
+                        <span class="chip">NumPy</span>
+                        <span class="chip">Pandas</span>
+                        <span class="chip">Python</span>
+                        <span class="chip">REST</span>
+                        <span class="chip">Scikit‑learn</span>
+                        <span class="chip">Seaborn</span>
+                        <span class="chip">SQL</span>
+                        <span class="chip">TensorFlow</span>
+                        <span class="chip">VS Code</span>
+                        <span class="chip">Node.js</span>
+                    </div>
+                </section>
+
+                <section class="block">
+                    <h2 class="block-title">Projects</h2>
+                    <div class="item">
+                        <div class="item-head">
+                            <div class="item-role">Customer Segmentation with Clustering</div>
+                            <div class="item-meta">01/2024 – 02/2024</div>
+                        </div>
+                        <p class="tight">Developed a K‑means segmentation model to group customers based on purchase
+                            behavior.</p>
+                        <ul class="bullets">
+                            <li>Built pipelines for data cleaning, feature engineering, and model iteration.</li>
+                            <li>Created actionable dashboards; normalized purchase frequency, spending, and recency
+                                features.</li>
+                        </ul>
+                    </div>
+                </section>
+            </aside>
+        </div>
+    </main>
+</body>
+
+</html>
