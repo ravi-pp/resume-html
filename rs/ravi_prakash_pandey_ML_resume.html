@@ -107,6 +107,11 @@
 			.exp-company {
 				color: #1565c0;
 				font-weight: 500;
+				font-size: 15px;
+    			line-height: 24px;
+			}
+			.certification li {
+				font-size: 15px;
 			}
 			.exp-period,
 			.exp-location {
@@ -122,13 +127,23 @@
 				margin: 0 0 0 18px;
 				padding: 0;
 			}
+			.exp-list li{
+				padding-bottom: 4px;
+    			padding-top: 4px;
+			}
 			.edu-title {
 				font-weight: 600;
 				color: #222;
+				font-size: 14px;
 			}
 			.edu-school {
 				color: #1565c0;
+				font-size: 14px;
 			}
+			.edu-list{
+            margin-top: 6px;
+            line-height: 23px;
+        }
 			.edu-period,
 			.edu-location {
 				color: #888;
@@ -272,17 +287,18 @@
 					<div class="exp-period">04/2023 - Present | Noida, India</div>
 					<div class="exp-desc">A technology company focused on providing IT solutions and services.</div>
 					<ul class="exp-list">
-						<li>Architected and maintained robust Python-based data pipelines and analytics platforms.</li>
-						<li>Developed RESTful APIs with RestAPI and Django, GenAI for scalable web and mobile solutions.</li>
+						<li>Developed APIs (Flask, Django REST) to integrate ML & DL models into applications serving 1000+ daily users.</li>
+						<li>Preprocessed and engineered features from large datasets (10M+ rows) using Pandas, NumPy, SQL.</li>
 						<li>Led cross-functional teams in delivering high-impact software products.</li>
-						<li>Optimized ETL pipelines and automated reporting using pandas, NumPy, and SQL.</li>
-						<li>Mentored junior engineers and led a project module end-to-end.</li>
+						<li>Developed an AI-powered chatbot using LangChain, GPT LLM, and Retrieval-Augmented Generation (RAG).</li>
+						<li>Deployed models on AWS & GCP using Docker, CI/CD pipelines.</li>
 					</ul>
 				</div>
 				<div class="exp-job">
 					<div class="exp-job-title">Full Stack Developer</div>
 					<div class="exp-company">Exchange4Media (Adsert Web Solutions Pvt. Ltd)</div>
 					<div class="exp-period">10/2021 - 04/2023 | Noida, India</div>
+					<!-- 
 					<div class="exp-desc">A company engaged in software development.</div>
 					<ul class="exp-list">
 						<li>Designed automation scripts and performed advanced data analysis using Python.</li>
@@ -290,6 +306,7 @@
 						<li>Participated in code reviews, process improvements, and Agile ceremonies.</li>
 						<li>Collaborated with business stakeholders to gather requirements and deliver solutions.</li>
 					</ul>
+					-->
 				</div>
 				<!--<div class="exp-job">
 					<div class="exp-job-title">Software Engineer</div>
@@ -301,23 +318,28 @@
 					</ul>
 				</div> -->
 				<div class="exp-job">
-					<div class="exp-job-title">PHP Developer</div>
+					<div class="exp-job-title">Software Developer</div>
 					<div class="exp-company">Bhatiya Software Pvt Ltd (ProProfs)</div>
 					<div class="exp-period">05/2019 - 03/2021 | Noida, India</div>
+					<!-- 
 					<div class="exp-desc">A company engaged in software development.</div>
 					<ul class="exp-list">
 						<li>Worked on two different projects created PHP services and APIs and jQuery/AJAX, optimized MySQL queries, and integrated AWS S3 for secure asset handling and reliable deployments.</li>
 					</ul>
+					-->
 				</div>
 				<div class="exp-job">
-					<div class="exp-job-title">PHP Developer</div>
+					<div class="exp-job-title">Software Developer</div>
 					<div class="exp-company">91 Techive Online Services Pvt Ltd</div>
 					<div class="exp-period">03/2018 - 05/2019 | Noida, India</div>
+					<!-- 
 					<div class="exp-desc">A company engaged in software development.</div>
 					<ul class="exp-list">
 						<li>Built and deployed PHP microservices on a MySQL backbone using a PHP framework.</li>
 					</ul>
+					-->
 				</div>
+				<!-- 
 				<h2 class="section-title">EDUCATION</h2>
 				<div class="edu-title">Master of Computer Application (MCA) - Computer Science and Engineering</div>
 				<div class="edu-school">Integral University </div>
@@ -326,12 +348,36 @@
 				<div class="edu-title">Bachelor of Computer Application (BCA) - Computer Science</div>
 				<div class="edu-school">MAKAUT (West Bengal University of Technology) </div>
 				<div class="edu-period"></div>
-				<div class="edu-location">2013 - 2016 | Kolkata, India</div>
+				<div class="edu-location">2013 - 2016 | Kolkata, India</div> -->
 
-				<h2 class="section-title">RELEVANT PROJECT</h2>
-				<div class="project-title">Kaplan College Pathway Program – AI Agent Development</div>
+				<h2 class="section-title">PROJECTS</h2>
+				<div class="project-title">Data Integration & Insight Dashboard – The Brand Group (TBG)</div>
 				<br>
-				<div class="summary">Developed an AI-powered agent using <b>LangChain, Gemini API, and Retrieval-Augmented Generation (RAG)</b> to support Kaplan College’s student pathway program. Implemented intelligent query handling and contextual information retrieval, and deployed the solution on an ,<b>AWS server</b> to ensure scalable and reliable access.
+				<div class="summary">Designed and implemented a robust data pipeline to clean and integrate large,
+					unstructured CSV datasets. Applied exploratory data analysis and feature engineering using Jupyter
+					Notebook and Pandas to uncover actionable insights. Built machine learning models for predictive
+					analysis, helping the team make data-driven decisions. Automated ETL processes to streamline data
+					preprocessing and improve model performance.
+				</div>
+
+            <div class="project-title">Sales Forecasting & Data Insights – Continental</div>
+            <br>
+            <div class="summary">Developed a machine learning solution to forecast profit, loss, and future sales trends
+                by analyzing large historical datasets. Performed data cleaning, feature engineering, and regression
+                modeling to enhance forecasting accuracy. Designed interactive dashboards to visualize trends and
+                seasonal patterns, enabling the team to make informed, data-driven decisions for strategic planning.
+            </div>
+            <div class="project-title">Intelligent Invoice Processing Automation</div>
+            <br>
+            <div class="summary">Developed an AI-powered invoice processing system to automate extraction of key fields from PDF invoices. Analyzed 65+ invoice samples with varying layouts to identify structural patterns and build a robust extraction pipeline. Implemented document parsing and pattern recognition to handle multiple invoice formats and layout variations. Integrated LLM-based document understanding using AWS Bedrock and Azure LLM services to improve accuracy in field extraction. Deployed the solution on AWS cloud infrastructure, with experimentation and model validation performed using AWS SageMaker.
+            </div>
+            <div class="project-title">AI-Powered Resume Screening & Candidate Evaluation Agent</div>
+            <br>
+            <div class="summary">Built a GenAI-based resume screening agent to automate candidate evaluation against job requirements. Implemented skill-matching algorithms and scoring matrices to rank candidates based on experience, skills, and qualifications. Integrated LLM capabilities (AWS Bedrock / Azure OpenAI) to dynamically generate technical interview questions tailored to the candidate’s skillset. The system streamlined recruiter workflows and improved candidate shortlisting efficiency through automated profile analysis and intelligent question generation.
+            </div>
+				<div class="project-title">Kaplan College Pathway Program – Chatbot Development</div>
+				<br>
+				<div class="summary">Developed an AI-powered chatbot using LangChain, GPT LLM, and Retrieval-Augmented Generation (RAG) to support Kaplan College’s student pathway program. Implemented intelligent query handling and contextual information retrieval, and deployed the solution on an, AWS server to ensure scalable and reliable access.
 				</div>
 			</div>
 			<div class="right">
@@ -366,6 +412,7 @@
 				 <div class="skills-list">
 					<!-- PyTorch, TensorFlow, Keras, Hugging Face Transformers-->
                 <span class="skill"><b>Programming & Libraries</b>: Python, Pandas, NumPy, Scikit-learn, Langchain, Django, FastAPI, PHP</span>
+				<span class="skill"><b>Frontend</b>: Jquery, Html, React, Bootstrap, Streamlit</span>
                 <span class="skill"><b>Databases</b>: SQL, PostgreSQL</span>
                 <span class="skill"><b>Machine Learning</b>: Regression, Classification, Clustering, Feature Engineering, Model Evaluation</span>
 				<!--CNN, RNN, LSTMs,-->
@@ -375,18 +422,37 @@
                 <span class="skill"><b>Visualization:</b> Matplotlib, Seaborn</span>
                 <span class="skill"><b>Tools: </b>Git, Jupyter Notebook, Linux</span>
             </div>
-				<div class="right-section-title">KEY PROJECTS</div>
-				<ul class="project-list">
-					<li>
-						<span class="project-title">HR Chatbot for Employee</span><br><span style="color:#444;font-size:0.97em;">Designed and developed an HR chatbot to handle employee enquiries related to policies, leave, and general HR information.</span>
-					</li>
-					<li>
-						<span class="project-title">Automated ETL Pipeline</span><br><span style="color:#444;font-size:0.97em;">Designed and deployed an ETL pipeline for data ingestion and transformation using Python and SQL.</span>
-					</li>
-					<li>
-						<span class="project-title">Crypto Price Alert Bot</span><br><span style="color:#444;font-size:0.97em;">Developed a Telegram bot for crypto price alerts using REST APIs and Python automation.</span>
-					</li>
-				</ul>
+			<br>
+			    <div class="right-section-title">CERTIFICATION</div>
+					<ul class="achieve-list certification">
+						<li style="font-family: 15px;">
+							<i class="fa fa-star" aria-hidden="true"></i>
+							Python development Certification <br> <br>
+							<i class="fa fa-star" aria-hidden="true"></i>
+							Machine Learning Certification <br> <br>
+							<i class="fa fa-star" aria-hidden="true"></i>
+							React - Udemy Certification
+
+						</li>
+
+					</ul>
+				<div class="right-section-title">EDUCATION</div>
+				    <ul class="achieve-list">
+                 <div class="edu-title"> <span class="fa fa-building"></span> Master of Computer Application</div>
+                <li class="edu-list">
+                    <div class="edu-school">Integral University </div>
+                    <div class="edu-location">Percentage : 77%</div>
+                    <div class="edu-location">2019 - 2021 | Noida, India</div>
+                </li>
+            </ul>
+            <ul class="achieve-list">
+                 <div class="edu-title"> <span class="fa fa-graduation-cap"></span> Bachelor of Computer Application</div>
+                <li class="edu-list">
+                    <div class="edu-school">West Bengal University of Technology </div>
+                    <div class="edu-location">Percentage : 75%</div>
+                    <div class="edu-location">2013 - 2016 | Kolkata, India</div>
+                </li>
+            </ul>
 			</div>
 		</div>
 	</body>
