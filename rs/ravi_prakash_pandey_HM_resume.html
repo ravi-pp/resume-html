@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Ravi Prakash Pandey - Resume</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+		<style>
+			body {
+				font-family: 'Segoe UI', Arial, sans-serif;
+				background: #f4f6f8;
+				margin: 0;
+				padding: 0;
+			}
+			.resume-container {
+				max-width: 1000px;
+				margin: 40px auto;
+				background: #fff;
+				border-radius: 12px;
+				box-shadow: 0 4px 24px rgba(44, 62, 80, 0.10);
+				padding: 0;
+				display: flex;
+				flex-direction: row;
+				overflow: hidden;
+				page-break-inside: avoid;
+			}
+			.left {
+				flex-basis: 90%;
+				max-width: 90%;
+				padding: 40px 36px 40px 48px;
+			}
+			.right {
+				flex-basis: 40%;
+				max-width: 40%;
+				background: #f4f6f8;
+				padding: 40px 32px;
+				border-left: 2px solid #e3f2fd;
+			}
+			.name {
+				font-size: 2.3em;
+				font-weight: 700;
+				color: #222;
+				margin-bottom: 0;
+			}
+			.title {
+				font-size: 1.25em;
+				color: #1565c0;
+				font-weight: 600;
+				margin-bottom: 18px;
+				margin-top: 7px;
+			}
+			.contact-row {
+				display: flex;
+				align-items: center;
+				gap: 15px;
+				font-size: 1.08em;
+				color: #222;
+				margin-bottom: 10px;
+			}
+			.contact-row i {
+				color: #1565c0;
+				margin-right: 6px;
+			}
+			.contact-row a {
+				color: #1565c0;
+				text-decoration: none;
+			}
+			.avatar-circle {
+				width: 90px;
+				height: 90px;
+				background: #1a73e8;
+				color: #fff;
+				border-radius: 50%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-size: 2.2em;
+				font-weight: 700;
+				margin-left: auto;
+				margin-bottom: 32px;
+			}
+			.section-title {
+				font-size: 1.1em;
+				font-weight: 700;
+				color: #222;
+				margin-top: 32px;
+				margin-bottom: 10px;
+				letter-spacing: 0.5px;
+				border-bottom: 2px solid #e3f2fd;
+				padding-bottom: 4px;
+			}
+			.section-title:first-child {
+				margin-top: 0;
+			}
+			.summary {
+				margin-bottom: 18px;
+				color: #333;
+			}
+			.exp-job {
+				margin-bottom: 18px;
+			}
+			.exp-job-title {
+				font-weight: bold;
+				color: #222;
+				font-size: 1.08em;
+			}
+			.exp-company {
+				color: #1565c0;
+				font-weight: 500;
+				font-size: 15px;
+    			line-height: 24px;
+			}
+			.certification li {
+				font-size: 15px;
+			}
+			.exp-period,
+			.exp-location {
+				color: #888;
+				font-size: 0.98em;
+			}
+			.exp-desc {
+				margin-top: 6px;
+				margin-bottom: 0;
+				color: #444;
+			}
+			.exp-list {
+				margin: 0 0 0 18px;
+				padding: 0;
+			}
+			.exp-list li{
+				padding-bottom: 4px;
+    			padding-top: 4px;
+			}
+			.edu-title {
+				font-weight: 600;
+				color: #222;
+				font-size: 14px;
+			}
+			.edu-school {
+				color: #1565c0;
+				font-size: 14px;
+			}
+			.edu-list{
+            margin-top: 6px;
+            line-height: 23px;
+        }
+			.edu-period,
+			.edu-location {
+				color: #888;
+				font-size: 0.98em;
+			}
+			.right-section-title {
+				font-size: 1.08em;
+				font-weight: 700;
+				color: #222;
+				margin-top: 24px;
+				margin-bottom: 10px;
+				border-bottom: 2px solid #e3f2fd;
+				padding-bottom: 4px;
+			}
+			.cert-list,
+			.skills-list,
+			.achieve-list,
+			.project-list {
+				margin: 0;
+				padding-left: 0;
+				list-style: none;
+			}
+			.cert-list li {
+				margin-bottom: 10px;
+			}
+			.cert-list a {
+				color: #1565c0;
+				font-weight: 600;
+				text-decoration: none;
+			}
+			.achieve-list li {
+				margin-bottom: 10px;
+				color: #444;
+			}
+			.achieve-list i {
+				color: #1565c0;
+				margin-right: 7px;
+			}
+			.skills-list {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 8px;
+			}
+			.skill {
+            background: #e1e7eb;
+            color: #1565c0;
+            padding: 10px 11px;
+            border-radius: 16px;
+            font-size: 0.90em;
+            font-weight: 500;
+            margin-bottom: 6px;
+            line-height: 1.5;
+        	}
+			.project-list li {
+				margin-bottom: 12px;
+			}
+			.project-title {
+				font-weight: 600;
+				color: #1565c0;
+			}
+			.linkedin {
+				margin-left: 10px;
+				font-size: 1.1em;
+			}
+			@media(max-width: 900px) {
+				.resume-container {
+					flex-direction: column;
+				}
+				.left,
+				.right {
+					padding: 24px;
+				}
+				.avatar-circle {
+					margin-left: 0;
+				}
+			}
+			@media print {
+				@page {
+					size: A4 portrait;
+					margin: 20mm;
+				}
+				body {
+					-webkit-print-color-adjust: exact;
+					print-color-adjust: exact;
+					background: #fff !important;
+				}
+				.resume-container {
+					max-width: 700px !important;
+					width: 100% !important;
+					margin: 0 auto !important;
+					box-shadow: none !important;
+					border-radius: 0 !important;
+					display: flex !important;
+					flex-direction: row !important;
+					/* page-break-inside: avoid !important; */
+					overflow: visible !important;
+				}
+				.left, .right {
+					max-width: none !important;
+					width: 100% !important;
+					/* padding: 24px !important; */
+					box-sizing: border-box !important;
+					/* page-break-inside: avoid !important; */
+				}
+				img, table, div {
+					max-width: 100% !important;
+					page-break-inside: avoid !important;
+					overflow: hidden !important;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="resume-container">
+			<div class="left">
+				<div class="name">RAVI PRAKASH PANDEY</div>
+				<div class="title">GenAI Engineer | Senior Software Engineer</div>
+				<div class="contact-row">
+					<i class="fa-solid fa-phone"></i>
+					8013852543
+					<i class="fa-solid fa-envelope"></i>
+					<a href="mailto:raviprakashpandey15@gmail.com">raviprakashpandey15@gmail.com</a>
+					<a href="https://www.linkedin.com/in/ravi-prakash-pandey-255137107/" target="_blank" title="LinkedIn">
+					<i class="fa-brands fa-linkedin linkedin" title="LinkedIn"></i>
+					</a>
+					<!-- 
+					<a href="https://www.linkedin.com/in/ravi-prakash-pandey-255137107/" target="_blank">LinkedIn</a>
+					-->
+					<a href="https://github.com/ravi-pp" target="_blank" title="Github">
+					<i class="fa-brands fa-github github"></i>
+					</a>
+				</div>
+				<h2 class="section-title">SUMMARY</h2>
+				<div class="summary">Software Engineer with 8+ years of experience in backend development, cloud technologies, and scalable application design using Python, SQL, AWS, FastAPI, and Django. Skilled in integrating modern AI technologies, including GenAI and LLMs, to build intelligent solutions. Passionate about innovation and committed to advancing expertise in Machine Learning and AI-driven product development.
+				</div>
+				<h2 class="section-title">EXPERIENCE</h2>
+				<!-- Experience Section -->
+				<div class="exp-job">
+					<div class="exp-job-title">Senior Software Engineer</div>
+					<div class="exp-company">Happiest Minds Technologies</div>
+					<div class="exp-period">04/2023 - Present | Noida, India</div>
+					<div class="exp-desc">A technology company focused on providing IT solutions and services.</div>
+					<ul class="exp-list">
+						<li>Developed APIs and backend in Pimcore applications serving 1000+ daily users.</li>
+						<li>Preprocessed and engineered features from large datasets using Pandas, NumPy, SQL.</li>
+						<li>Led cross-functional teams in delivering high-impact software products.</li>
+						<li>Developed demo project an AI-powered chatbot using LangChain, GPT LLM, and Retrieval-Augmented Generation (RAG).</li>
+						<li>Deployed models on AWS & GCP using Docker, CI/CD pipelines.</li>
+					</ul>
+				</div>
+				<div class="exp-job">
+					<div class="exp-job-title">Full Stack Developer</div>
+					<div class="exp-company">Exchange4Media (Adsert Web Solutions Pvt. Ltd)</div>
+					<div class="exp-period">10/2021 - 04/2023 | Noida, India</div>
+					<!-- 
+					<div class="exp-desc">A company engaged in software development.</div>
+					<ul class="exp-list">
+						<li>Designed automation scripts and performed advanced data analysis using Python.</li>
+						<li>Contributed to full-stack web application development and deployment.</li>
+						<li>Participated in code reviews, process improvements, and Agile ceremonies.</li>
+						<li>Collaborated with business stakeholders to gather requirements and deliver solutions.</li>
+					</ul>
+					-->
+				</div>
+				<!--<div class="exp-job">
+					<div class="exp-job-title">Software Engineer</div>
+					<div class="exp-company">Cyfuture India Pvt Ltd</div>
+					<div class="exp-period">03/2021 - 12/2021 | Noida, India</div>
+					<div class="exp-desc">A company engaged in software development.</div>
+					<ul class="exp-list">
+						<li>Developed and maintained scalable web features and automation scripts, delivering reliable releases and performance improvements across PHP and Python-based systems.</li>
+					</ul>
+				</div> -->
+				<div class="exp-job">
+					<div class="exp-job-title">Software Developer</div>
+					<div class="exp-company">Bhatiya Software Pvt Ltd (ProProfs)</div>
+					<div class="exp-period">05/2019 - 03/2021 | Noida, India</div>
+					<!-- 
+					<div class="exp-desc">A company engaged in software development.</div>
+					<ul class="exp-list">
+						<li>Worked on two different projects created PHP services and APIs and jQuery/AJAX, optimized MySQL queries, and integrated AWS S3 for secure asset handling and reliable deployments.</li>
+					</ul>
+					-->
+				</div>
+				<div class="exp-job">
+					<div class="exp-job-title">Software Developer</div>
+					<div class="exp-company">91 Techive Online Services Pvt Ltd</div>
+					<div class="exp-period">03/2018 - 05/2019 | Noida, India</div>
+					<!-- 
+					<div class="exp-desc">A company engaged in software development.</div>
+					<ul class="exp-list">
+						<li>Built and deployed PHP microservices on a MySQL backbone using a PHP framework.</li>
+					</ul>
+					-->
+				</div>
+				<!-- 
+				<h2 class="section-title">EDUCATION</h2>
+				<div class="edu-title">Master of Computer Application (MCA) - Computer Science and Engineering</div>
+				<div class="edu-school">Integral University </div>
+				<div class="edu-location">2019 - 2021 | Noida, India</div>
+				<br>
+				<div class="edu-title">Bachelor of Computer Application (BCA) - Computer Science</div>
+				<div class="edu-school">MAKAUT (West Bengal University of Technology) </div>
+				<div class="edu-period"></div>
+				<div class="edu-location">2013 - 2016 | Kolkata, India</div> -->
+
+				<h2 class="section-title">PROJECTS</h2>
+
+            <div class="project-title">FastAPI Application - Todo App</div>
+            <br>
+            <div class="summary">Developed a Todo Management Application using FastAPI, implementing secure user authentication and authorization with JWT tokens. Designed and built RESTful APIs for task creation, updating, deletion, and retrieval, while integrating database operations for persistent data storage. Focused on API security, request validation, and scalable backend architecture to deliver a reliable and efficient task management solution. <br>
+			<b>Git: </b> <a href="https://github.com/ravi-pp/my-fastapi">https://github.com/ravi-pp/my-fastapi</a>
+            </div>
+			<div class="project-title">Data Integration & Insight Dashboard </div>
+				<br>
+				<div class="summary">Designed and implemented a robust data pipeline to clean and integrate large,
+					unstructured CSV datasets. Applied exploratory data analysis and feature engineering using Jupyter
+					Notebook and Pandas to uncover actionable insights. Built machine learning models for predictive
+					analysis, helping the team make data-driven decisions. Automated ETL processes to streamline data
+					preprocessing and improve model performance.
+				</div>
+            <div class="project-title">AI-Powered Resume Screening</div>
+            <br>
+            <div class="summary">Built a GenAI-based resume screening agent to automate candidate evaluation against job requirements. Implemented skill-matching algorithms and scoring matrices to rank candidates based on experience, skills, and qualifications. Integrated LLM capabilities (AWS Bedrock / Azure OpenAI) to dynamically generate technical interview questions tailored to the candidate’s skillset. The system streamlined recruiter workflows and improved candidate shortlisting efficiency through automated profile analysis and intelligent question generation.
+				<br>
+			<b>Git:</b><a href="https://github.com/ravi-pp/resume-parser">https://github.com/ravi-pp/resume-parser</a>
+            </div>
+			<div class="project-title">PepsiCo's</div>
+				<br>
+				<div class="summary">Worked on PepsiCo's Pimcore-based Product Information Management (PIM) platform, developing custom bundles and extending core functionalities to meet business requirements. Designed and implemented custom dashboards for streamlined data management and enhanced user experience. Built and integrated REST APIs to enable seamless data exchange between Pimcore and external enterprise systems.
+				</div>
+			<div class="project-title">Kaplan College Pathway Program</div>
+				<br>
+				<div class="summary">Developed and enhanced the Kaplan College Pathway Program’s Pimcore-based Product Information Management (PIM) platform by creating custom bundles and extending core functionalities. Designed and implemented custom dashboards and ExtJS-based listing pages with dynamic filtering and optional field configurations for efficient data management.
+				</div>
+			</div>
+			<div class="right">
+				<img src="./Ravi_Passport_Photo.jpeg" alt="ravi prakash pandey" style="width:90px;height:90px;border-radius:50%;margin-bottom:32px; display:block; margin-left:auto; margin-right:auto;">
+				<div style="margin-bottom:18px;color:#444;font-size:1.05em;">
+					<strong>Date of Birth:</strong>
+					02 Feb 1995<br>
+					<strong>Gender:</strong>
+					Male
+					<br>
+					<strong>Location:</strong>
+					Noida, India
+				</div>
+				<div class="right-section-title">LANGUAGES</div>
+				<div style="color:#1565c0;font-weight:500;margin-bottom:10px;">English, Hindi</div>
+				<div class="right-section-title">HOBBIES</div>
+				<ul class="achieve-list">
+					<li>Reading tech blogs</li>
+					<li>Playing Game</li>
+					<li>Traveling</li>
+				</ul>
+				<div class="right-section-title">AWARDS</div>
+				<ul class="achieve-list">
+					<li>
+						<i class="fa-solid fa-heart"></i>
+						Awarded “Extra Miles Champion” award for exceptional ownership and delivery at <b style="color: #444;font-size: 15px;">Happiest Minds</b> (2025)</li>
+						<li>
+						<i class="fa-solid fa-rocket"></i>
+						Awarded “Best Achiever” award for excellence in coding and project delivery at <b style="color: #444;font-size: 15px;">Exchange4Media</b> (2022).</li>
+				</ul>
+				<div class="right-section-title">SKILLS</div>
+				 <div class="skills-list">
+					<!-- PyTorch, TensorFlow, Keras, Hugging Face Transformers-->
+                <span class="skill"><b>Programming & Libraries</b>: Python, Pandas, NumPy, Scikit-learn, Langchain, Django, FastAPI, PHP</span>
+				<span class="skill"><b>Frontend</b>: Jquery, Html, React, Bootstrap, Streamlit</span>
+                <span class="skill"><b>Databases</b>: SQL, PostgreSQL</span>
+                <span class="skill"><b>Machine Learning</b>: Regression, Classification, Clustering, Feature Engineering, Model Evaluation</span>
+				<!--CNN, RNN, LSTMs,-->
+                <span class="skill"><b>Deep Learning & LLMs</b>: Transformers, GPT models, OpenAI API, Hugging Face, GenAI, RAG</span>
+                <span class="skill"><b>Deployment & Cloud:</b> Docker, AWS, Bedrock, Render</span>
+				<!--Power BI-->
+                <span class="skill"><b>Visualization:</b> Matplotlib, Seaborn</span>
+                <span class="skill"><b>Tools: </b>Git, Jupyter Notebook, Linux</span>
+            </div>
+			<br>
+			    <div class="right-section-title">CERTIFICATION</div>
+					<ul class="achieve-list certification">
+						<li style="font-family: 15px;">
+							<i class="fa fa-star" aria-hidden="true"></i>
+							Python development Certification <br> <br>
+							<i class="fa fa-star" aria-hidden="true"></i>
+							Machine Learning Certification <br> <br>
+							<i class="fa fa-star" aria-hidden="true"></i>
+							React - Udemy Certification
+
+						</li>
+
+					</ul>
+				<div class="right-section-title">EDUCATION</div>
+				    <ul class="achieve-list">
+                 <div class="edu-title"> <span class="fa fa-building"></span> Master of Computer Application</div>
+                <li class="edu-list">
+                    <div class="edu-school">Integral University </div>
+                    <div class="edu-location">Percentage : 77%</div>
+                    <div class="edu-location">2019 - 2021 | Noida, India</div>
+                </li>
+            </ul>
+            <ul class="achieve-list">
+                 <div class="edu-title"> <span class="fa fa-graduation-cap"></span> Bachelor of Computer Application</div>
+                <li class="edu-list">
+                    <div class="edu-school">West Bengal University of Technology </div>
+                    <div class="edu-location">Percentage : 75%</div>
+                    <div class="edu-location">2013 - 2016 | Kolkata, India</div>
+                </li>
+            </ul>
+			</div>
+		</div>
+	</body>
+</html>
